@@ -30,7 +30,6 @@ public class FirebaseManager {
                     context.startActivity(i);
                     Toast.makeText(context, "Hello "
                             + Build.MANUFACTURER
-                            + Build.MODEL
                             + " user!",
                             Toast.LENGTH_SHORT).show();
                 }
