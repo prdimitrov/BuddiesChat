@@ -15,7 +15,6 @@ public class FirebaseManager {
 
     /**
      * This method does authenticate the anonymous user, that will log in to the application
-     * @param context
      */
     public void firebaseAnonymousAuth(Context context) {
         FirebaseAuth.getInstance().signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
