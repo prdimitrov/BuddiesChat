@@ -2,6 +2,8 @@ package com.example.buddieschat.auth;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -26,7 +28,11 @@ public class FirebaseManager {
                     Intent i = new Intent(context, GroupsActivity.class);
                     i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(i);
-
+                    Toast.makeText(context, "Hello "
+                            + Build.MANUFACTURER
+                            + Build.MODEL
+                            + " user!",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
         });
