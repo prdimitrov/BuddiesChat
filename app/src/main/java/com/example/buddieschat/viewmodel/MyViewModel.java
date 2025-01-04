@@ -9,6 +9,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.buddieschat.auth.FirebaseManager;
 import com.example.buddieschat.model.ChatGroup;
+import com.example.buddieschat.model.ChatMessage;
 
 import java.util.List;
 
@@ -43,4 +44,13 @@ public class MyViewModel extends AndroidViewModel {
     public void createNewGroup(String groupName) {
         firebaseManager.createNewChatGroup(groupName);
     }
+
+    public MutableLiveData<List<ChatMessage>> getMessagesLiveData(String groupName) {
+        return firebaseManager.getMessagesLiveData(groupName);
+    }
+
+    public void sendMessage(String msg, String chatGroup) {
+        firebaseManager.sendMessage(msg, chatGroup);
+    }
+
 }
